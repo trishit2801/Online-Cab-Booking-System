@@ -38,7 +38,7 @@ public class ViewRequestsActivity extends AppCompatActivity {
     LocationManager locationManager;
     LocationListener locationListener;
     String rideRequestedBy;
-    ArrayList<Double> requestLatitude = new ArrayList<Double>();
+    ArrayList<Double> requestLatitude = new ArrayList<>();
     ArrayList<Double> requestLongitude = new ArrayList<Double>();
     ArrayList<String> usernames = new ArrayList<String>();
     public void updateListView(Location location){
@@ -63,15 +63,15 @@ public class ViewRequestsActivity extends AppCompatActivity {
 
                                     Double distanceInKilometeres = geoPointLocation.distanceInKilometersTo(requestLocation);
                                     Double distanceInOneDP = (double) Math.round(distanceInKilometeres * 10) / 10;
-                                    /*
-                                      void merge(int arr[], int beg, int mid, int end)
+                                     /*
+                                      void merge(int requests[], int beg, int mid, int end)
                                       {
 
                                          int l = mid - beg + 1;
                                          int r = end - mid;
 
-                                         intLeftArray[] = new int [l];
-                                         intRightArray[] = new int [r];
+                                         int LeftArray[] = new int[l];
+                                         int RightArray[] = new int[r];
 
                                          for (int i=0; i<l; ++i)
                                             LeftArray[i] = arr[beg + i];
@@ -86,39 +86,39 @@ public class ViewRequestsActivity extends AppCompatActivity {
                                          {
                                             if (LeftArray[i] <= RightArray[j])
                                             {
-                                                arr[k] = LeftArray[i];
+                                                requests[k] = LeftArray[i];
                                                 i++;
                                              }
                                             else
                                             {
-                                                arr[k] = RightArray[j];
+                                                requests[k] = RightArray[j];
                                                 j++;
                                              }
                                             k++;
                                           }
                                           while (i<l)
                                           {
-                                               arr[k] = LeftArray[i];
+                                               requests[k] = LeftArray[i];
                                                i++;
                                                k++;
                                            }
 
                                           while (j<r)
                                           {
-                                              arr[k] = RightArray[j];
+                                              requests[k] = RightArray[j];
                                               j++;
                                               k++;
                                            }
                                         }
 
-                                        void sort(int arr[], int beg, int end)
+                                        void sort(int requests[], int beg, int end)
                                         {
                                           if (beg<end)
                                             {
                                                 int mid = (beg+end)/2;
-                                                sort(arr, beg, mid);
-                                                sort(arr , mid+1, end);
-                                                merge(arr, beg, mid, end);
+                                                sort(requests, beg, mid);
+                                                sort(requests , mid+1, end);
+                                                merge(requests, beg, mid, end);
                                              }
                                          }
                                      */
